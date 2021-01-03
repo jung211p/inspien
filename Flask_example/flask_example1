@@ -1,0 +1,12 @@
+from flask import Flask
+
+#Flask 인스턴스 생성
+app = Flask(__name__)
+
+#웹표현->route()메소드 사용.
+# @:장식자 -> flask에서는 url연결에 활용.(다음행의 함수부터 장식자 적용)
+@app.route('/')
+def home():
+    return 'Hello, World!'
+if __name__ == '__main__':
+    app.run(debug=True)
